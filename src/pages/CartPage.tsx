@@ -88,7 +88,7 @@ const CartPage = () => {
   };
 
   const cartTotal = getCartTotal();
-  const deliveryFee = 2.99;
+  const deliveryFee = 29.9;
   const tax = cartTotal * 0.08; // 8% tax
   const finalTotal = cartTotal + deliveryFee + tax;
 
@@ -176,20 +176,20 @@ const CartPage = () => {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span>${cartTotal.toFixed(2)}</span>
+                    <span>Rs. {cartTotal.toFixed()}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Delivery Fee</span>
-                    <span>${deliveryFee.toFixed(2)}</span>
+                    <span>Rs. {deliveryFee.toFixed()}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Tax</span>
-                    <span>${tax.toFixed(2)}</span>
+                    <span>Rs. {tax.toFixed()}</span>
                   </div>
                   <Separator className="my-3" />
                   <div className="flex justify-between font-medium">
                     <span>Total</span>
-                    <span>${finalTotal.toFixed(2)}</span>
+                    <span>Rs. {finalTotal.toFixed()}</span>
                   </div>
                 </div>
                 
