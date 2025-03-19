@@ -136,7 +136,7 @@ const OrdersPage = () => {
                     {order.items.map(item => (
                       <div key={item.foodItemId} className="flex justify-between text-sm">
                         <span>{item.quantity} x {item.name}</span>
-                        <span>${(item.price * item.quantity).toFixed(2)}</span>
+                        <span>Rs. {(item.price * item.quantity).toFixed()}</span>
                       </div>
                     ))}
                   </div>
@@ -145,7 +145,7 @@ const OrdersPage = () => {
                   
                   <div className="flex justify-between font-medium">
                     <span>Total</span>
-                    <span>${order.totalAmount.toFixed(2)}</span>
+                    <span>Rs. {order.totalAmount.toFixed()}</span>
                   </div>
                   
                   <div className="mt-4">
